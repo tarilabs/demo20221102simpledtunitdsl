@@ -7,6 +7,7 @@ import javax.inject.Inject;
 import org.drools.ruleunits.api.RuleUnit;
 import org.drools.ruleunits.api.RuleUnitInstance;
 import org.drools.ruleunits.api.RuleUnitProvider;
+import org.drools.ruleunits.dsl.RuleUnitProviderForDSL;
 import org.junit.jupiter.api.Test;
 
 import io.quarkus.test.junit.QuarkusTest;

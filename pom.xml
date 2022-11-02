@@ -15,7 +15,7 @@
     <quarkus.platform.version>2.13.3.Final</quarkus.platform.version>
     <skipITs>true</skipITs>
     <surefire-plugin.version>3.0.0-M7</surefire-plugin.version>
-    <version.drools>8.29.0.Final</version.drools>
+    <version.drools>8.31.0-SNAPSHOT</version.drools>
   </properties>
   <dependencyManagement>
     <dependencies>
