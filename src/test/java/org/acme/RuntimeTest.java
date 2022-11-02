@@ -15,8 +15,8 @@ import io.quarkus.test.junit.QuarkusTest;
 @QuarkusTest
 public class RuntimeTest {
     
-    // @Inject
-    // RuleUnit<SimpleDTUnit> ruleUnit;
+    @Inject
+    RuleUnit<SimpleDTUnit> ruleUnit;
 
     @Test
     public void testR1() {
@@ -24,8 +24,10 @@ public class RuntimeTest {
         unitData.getAge().set( 19 );
         unitData.getIncidents().set( false );
 
-        // CDI version: RuleUnitInstance<SimpleDTUnit> unitInstance = ruleUnit.createInstance(unitData);
-        RuleUnitInstance<SimpleDTUnit> unitInstance = RuleUnitProvider.get().createRuleUnitInstance(unitData);
+        // CDI version:
+        RuleUnitInstance<SimpleDTUnit> unitInstance = ruleUnit.createInstance(unitData);
+        // Programmatic version:
+        // RuleUnitInstance<SimpleDTUnit> unitInstance = RuleUnitProvider.get().createRuleUnitInstance(unitData);
 
         unitInstance.fire();
 
